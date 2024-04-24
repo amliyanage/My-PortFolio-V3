@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
     --background-color : #ffff;
@@ -27,3 +28,128 @@
     border: none;
     color: var(--background-color);
 }
+
+#homePage{
+    position: relative;
+    top: 7rem;
+    height: 88vh;
+}
+
+#homePage > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+#homePage .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+#homePage .container > div > :first-child{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4.2px;
+}
+
+#homePage h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    letter-spacing: 5.88px;
+    color: var(--primary-color);
+}
+
+#homePage p{
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.26px;
+    line-height: 24.39px;
+    width: 100%;
+}
+
+#homePage .follow{
+    display: flex;
+    gap: 20px;
+}
+
+#homePage .follow div{
+    border: 1px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+
+#homePage .follow i{
+    color: var(--background-color);
+    stroke-width: 1px;
+    -webkit-text-stroke: 1px var(--primary-color);
+    font-size: 18px;
+    margin: 10px;
+}
+
+#homePage button{
+    padding: 19px 60px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.35px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-color);
+    margin-top: 60px;
+}
+
+#homePage .buttons > :last-child{
+    border: 1px solid var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+
+#homePage .home-image img{
+    width: 464px;
+    position: absolute;
+}
+
+#homePage .home-image .box div{
+    width: 464px;
+    height: 518px;
+    position: relative;
+    background-color: #CA82F8;
+    z-index: -1;
+    border-radius: 8px;
+    animation: home-animation-1 2s infinite;
+}
+
+#homePage .home-image .box > :last-child{
+    position: absolute;
+    top: 167px;
+    animation: home-animation-2 2s infinite;
+}
+
+@keyframes home-animation-1 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(30px) translateY(30px);
+    }
+}
+
+@keyframes home-animation-2 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-30px) translateY(-30px);
+    }
+}
+
