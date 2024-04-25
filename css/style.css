@@ -163,6 +163,12 @@
 
 /* media queries */
 
+@media (max-width : 1440px){
+    #homePage .home-image .box > :last-child {  
+        top: 132px;
+    }
+}
+
 @media (max-width: 1200px){
     #homePage .container{
         gap: 50px;
