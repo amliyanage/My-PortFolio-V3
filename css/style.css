@@ -115,8 +115,12 @@
 
 
 #homePage .home-image img{
+    z-index: 100;
+}
+
+.carousel {
+    position: absolute !important;
     width: 464px;
-    position: absolute;
 }
 
 #homePage .home-image .box div{
