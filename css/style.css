@@ -5,6 +5,10 @@
 :root{
     --background-color : #ffff;
     --primary-color : #CA82F8;
+    --subtext-homePage: 30px;
+    --Main-text: 42px;
+    --p:18px;
+    --button: 15px;
 }
 
 #navbar nav{
@@ -53,21 +57,21 @@
 #homePage .container > div > :first-child{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: var(--subtext-homePage);
     letter-spacing: 4.2px;
 }
 
 #homePage h1{
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-    font-size: 42px;
+    font-size: var(--Main-text);
     letter-spacing: 5.88px;
     color: var(--primary-color);
 }
 
 #homePage p{
     font-family: "Karla", sans-serif;
-    font-size: 18px;
+    font-size: var(--p);
     font-weight: 500;
     letter-spacing: 1.26px;
     line-height: 24.39px;
@@ -91,13 +95,13 @@
     color: var(--background-color);
     stroke-width: 1px;
     -webkit-text-stroke: 1px var(--primary-color);
-    font-size: 18px;
+    font-size: var(--p);
     margin: 10px;
 }
 
 #homePage button{
     padding: 19px 60px;
-    font-size: 15px;
+    font-size: var(--button);
     font-weight: 500;
     letter-spacing: 1.35px;
     border-radius: 8px;
@@ -156,4 +160,141 @@
         transform: translateX(-30px) translateY(-30px);
     }
 }
+
+/* media queries */
+
+@media (max-width: 1200px){
+    #homePage .container{
+        gap: 50px;
+    }
+
+    #homePage .home-image .box div{
+        width: 400px;
+        height: 450px;
+    }
+
+    #homePage .home-image .box > :last-child{
+        top: 150px;
+    }
+
+    .carousel{
+        width: 395px;
+    }
+
+    #homePage .home-image .box > :last-child {
+        top: 166px;
+    }
+
+    #homePage .home-image .box div{
+        width: 395px;
+        height: 440px !important;
+    }
+
+    :root{
+        --subtext-homePage: 20px;
+        --Main-text: 32px;
+        --p:14px;
+        --button: 12px;
+    }
+
+    @keyframes home-animation-1 {
+        0% {
+            transform: translateX(0) translateY(0);
+        }
+        50% {
+            transform: translateX(15px) translateY(15px);
+        }
+    }
+    
+    @keyframes home-animation-2 {
+        0% {
+            transform: translateX(0) translateY(0);
+        }
+        50% {
+            transform: translateX(-15px) translateY(-15px);
+        }
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    #homePage{
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    #homePage .container{
+        flex-direction: column;
+        gap: 90px;
+    }
+
+    #homePage .home-image .box > :last-child {
+        top: 413px;
+    }
+
+    #homePage .container > div > :first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width : 425px){
+
+    #homePage{
+        height: 110vh;
+    }
+
+    #homePage p{
+        padding: 10px;
+    }
+
+    .carousel {
+        width: 332px;
+    }
+
+    #homePage .home-image .box div {
+        width: 345px;
+        height: 379px !important;
+    }
+
+    #homePage .home-image .box > :last-child {
+        top: 545px;
+    }
+
+    #homePage h1{
+        letter-spacing: 1.88px;
+        margin-top: 10px;
+    }
+
+    :root{
+        --subtext-homePage: 15px;
+        --Main-text: 25px;
+        --p:14px;
+        --button: 10px;
+    }
+}
+
+@media (max-width : 375px) {
+    #homePage .buttons{
+        display: flex;
+        gap: 10px;
+    }
+
+    .carousel {
+        width: 302px;
+    }
+
+    #homePage .home-image .box div {
+        width: 315px;
+        height: 349px !important;
+    }
+
+    #homePage .home-image .box > :last-child {
+        top: 581px;
+    }
+}
+
 
